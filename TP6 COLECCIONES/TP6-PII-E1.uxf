@@ -1,0 +1,48 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>220</x><y>20</y><w>210</w><h>280</h></coordinates><panel_attributes>Producto
+--
+-id: String
+-nombre: String
+-precio: double
+-cantidad: int
+-categoria: CategoriaProducto
+--
++Producto(String, String, double, int, CategoriaProducto): +Producto(String, String, CategoriaProducto)
++getId(): String
++getNombre: String
++getPrecio: double
++getCantidad: int
++getCategoriaProducto(): CategoriaProducto
++setNombre(String): void
++setCantidad(int): void
++setPrecio(double): void
++mostrarInfo(): void
++toString((): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>100</y><w>210</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+CategoriaProducto
+--
+_-ALIMENTOS_
+_-ELECTRONICA_
+_-ROPA_
+_-HOGAR_
+-descripcion: String
+--
+-CategoriaProductos(String): CategoriaProducto
++getDescripcion(): String
++mostrarCategorias(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>370</y><w>370</w><h>210</h></coordinates><panel_attributes>Inventario
+--
+-productos: ArrayList
+--
++agregarProducto(Producto): void
++listarProducto(): void
++buscarProductoPorId(String id): Producto
++eliminarProducto(String id): void
++actualizarStock(String id, int cantidad): void
++filtrarPorCategoria(CatagoriaProducto): List&lt;Producto&gt;
++obtenerTotalStocj(): int
+-maximoStock(): int
++obtenerProductoConMayorStock(): List&lt;Producto&gt;
++filtrarProductosPorPrecio(dobuble min, double max): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>160</y><w>210</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>190;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>290</y><w>90</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+productos</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>

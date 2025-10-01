@@ -1,0 +1,42 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>650</x><y>420</y><w>230</w><h>190</h></coordinates><panel_attributes>Autor
+--
+- id: String
+- nombre: String
+- nacionalidad: String
+--
++Autor(String, String, String): Autor
++getNombre(): String
++getNacionalidad(): String
++setNombre(String): void
++setNacionalidad(String): void
++ mostrarInfo(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>100</y><w>210</w><h>220</h></coordinates><panel_attributes>Libro
+--
+-isbn: String
+-titulo: String
+-anio: int
+--
++Libro(String, String, int, Autor)
++getIsnb(): String
++getTitulo(): String
++getAnio(): int
++getAutor(): Autor
++setTitulo(String): void
++setAnio(int): void
++setAutor(Autor): void
++mostrarInfo(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>100</y><w>270</w><h>190</h></coordinates><panel_attributes>Biblioteca
+--
+-nombre: String
+--
++Bibliteca(String): Bibliteca
++agregarLibro(String,String,int,Autor): void
++listarLibros(): void
++buscarLibroPorIsbn(String): Libro
++eliminarLibro(String): void
++obtenerCantidadLibros(): void
++filtrarLibrosPorAnio(int): void
++mostrarAutoresDisponibles(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>180</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2= *
+libros</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>310</y><w>60</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..n
+autor</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element></diagram>

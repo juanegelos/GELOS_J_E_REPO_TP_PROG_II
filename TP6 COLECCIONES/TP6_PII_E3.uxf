@@ -1,0 +1,47 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>570</x><y>410</y><w>270</w><h>230</h></coordinates><panel_attributes>Profesor
+--
+-id: String
+-nombre: String
+-especialidad: String
+--
++Profesor(String,String,String): Profesor
++getId(): String
++getNombre(): String
++getEspecialidad(): String
++setNombre(String): void
++setEspecialidad(): void
++getCursos(): List&lt;Curso&gt;
++agregarCurso(Curso): void
++eliminarCurso(Curso): void
++mostrarInfo(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Curso
+--
+-codigo: String
+-nombre: String
+--
++Curso(String, String): Curso
++getCodigo(): String
++getNombre(): String
++setNombre(String): void
++setProfesor(Profesor): void
++getProfesor(): Profesor
++mostrarInfo(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>90</y><w>360</w><h>240</h></coordinates><panel_attributes>Universidad
+--
+-nombre: String
+--
++Universidad(String): Universidad
++agregarProfesor(Profesor): void
++agregarCurso(Curso): void
++asignarProfesorACurso(String codigoCurso, String idProfesor): void
++desAsignarProfesorACurso(String codigoCurso, String idProfesor): void
++buscarProfesorPorId(String): Profesor
++buscarCursoPorCodigo(String): Curso
++listarProfesores(): void
++listarCursos(): void
++eliminarCurso(String codigo): void
++eliminarProfesor(String IdProfesor): void
++cantidadDeCursosPorProfesot(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>270</y><w>70</w><h>160</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+cursos</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>200</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=*</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>320</y><w>40</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+m1=*</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
