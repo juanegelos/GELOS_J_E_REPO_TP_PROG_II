@@ -63,7 +63,5 @@ public class Principal {
         System.out.println("\nLISTAMOS LOS PROFESORES CON LA CANTIDAD DE CURSOS "
                     + "QUE DICTA CADA UNO");
         utnSN.cantidadCursosPorProfesor();
-
     }
-    
 }

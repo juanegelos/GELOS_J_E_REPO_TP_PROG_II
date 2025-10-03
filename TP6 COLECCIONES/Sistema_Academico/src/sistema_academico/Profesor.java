@@ -30,11 +30,9 @@ public class Profesor {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
-
     public List<Curso> getCursos() {
         return cursos;
     }
-    
     public void agregarCurso(Curso curso){
         if (curso != null && !cursos.contains(curso)){
             cursos.add(curso);
@@ -61,7 +59,6 @@ public class Profesor {
         } else{
             cursosDados = null;
             }
-        
         System.out.println("Id: " + id+ ", Nombre: " + nombre+ ", Especialidad: " +
                     especialidad+ ", Cursos asignados: " + cursosDados);
     }
